@@ -30,9 +30,6 @@ class HtmlLayout {
 	
 	//Altera o Valor da pseudoVariável para cada ocorrência
 	function changeValue($param,$replace){
-		//Trata a coluna Status(Padrão para todas as tabelas) de uma maneira específica
-		$status = array(0 =>"Inativo", 1 => "Ativo");	
-		$replace = $param == "Status"?$status[$replace]:$replace;
 		$this->_getLayout = preg_replace('/%'.$param.'%/' , $replace, $this->_getLayout,1);
 	}
 	
