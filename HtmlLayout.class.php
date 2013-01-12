@@ -55,13 +55,17 @@ class HtmlLayout {
 	
 	
 	//Inclui arquivos comuns
-	function useincludes($param,$page){
+	function includes($param,$inlcude){
+		$this->_getLayout = preg_replace('(<!--%'.$param.'%-->)' , $inlcude, $this->_getLayout,1);
+	}
+	
+	//Inclui arquivos comuns
+	function htmlIncludes($param,$page){
 		$file = fopen(realpath($page), "r");
 		$subject = stream_get_contents($file);
 		$this->_getLayout = preg_replace('(<!--%'.$param.'%-->)' , $subject, $this->_getLayout,1);
 		fclose($file);
 	}
-	
 	
 	//Remove o encadeamento
 	function cutText($param){

@@ -1,6 +1,9 @@
 <?php
 include "HtmlLayout.class.php";
 
+//Inclusão de outras páginas PHP
+include "include_example.php";
+
 $layout = new HtmlLayout("example.html");
 
 //Troca o valor da pseudo variável html pelo valor desejado
@@ -19,7 +22,10 @@ $layout->cutText("ListExample");
 //Altera todos as as pseudo variáveis de uma só vez
 $layout->changeAllValue("itens", "O mesmo Valor");
 
-$layout->useincludes("include", "include_example.html");
+//Momento onde incluímos a página pho no parametro marcado no html
+$layout->includes("include", $inc_layout->getLayout());
+
+$layout->htmlIncludes("footer", "footer_html.html");
 
 echo $layout->getLayout();
 ?>
