@@ -1,7 +1,7 @@
 <?php
 /*
  .---------------------------------------------------------------------------.
-|  Software: PHPMailer - PHP email class                                    |
+|  Software: HtmlLayout PHP Html Manipulate Class                           |
 |   Version: 1.0                                                            |
 |   Contact: http://cargocollective.com/ulle							    |
 | ------------------------------------------------------------------------- |
